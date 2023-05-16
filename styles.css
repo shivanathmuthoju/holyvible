@@ -1,0 +1,343 @@
+/* CSS Reset */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+
+
+  /* Fonts */
+
+
+
+:root {
+    --white : #ffffff;
+    --yellow :#FFC727;
+    --red : #C8553D;
+    --green : #588B8B;
+    --blue : #080357;
+    --black : #000;
+    --charcoal : #36454F;
+
+}
+
+@font-face {
+    font-family: "Rolest";
+    src: url(./assets/fonts/Rolest-Script-Font/Rolest\ FREE.ttf);
+}
+
+@font-face {
+    font-family: "Modern";
+    src: url(./assets/fonts/Sk-Modernist-Regular.otf);
+}
+
+@font-face {
+font-family: "porter sans";
+src: url(./assets/fonts/porter_sans_block/porter-sans-inline-block-webfont.ttf);
+}
+
+.section  {
+    padding: 2em;
+    max-width: 100vw;
+    background-color: #fff;
+}
+
+h1, h2 {
+    font-family: "Rolest";
+}
+
+p {
+    font-family: "Modern";
+    font-size: 1.5em;
+}
+
+.hero {
+    height: 100vh;
+    max-width: 100vw;
+    /* overflow: hidden; */
+    justify-content: space-between;
+    align-items: center;
+    background-image: radial-gradient(#f3f3f3 3px, transparent 3px);
+    background-size: 30px 30px;
+    background-color: #ffffff;
+    
+}
+
+.hero-img-container {
+  width: max-content;
+  height: 70%;
+  display:grid;
+  place-items: center;
+}
+
+.hero-text {
+  width: max-content;
+  height: 30%;
+  overflow: hidden;
+  padding: 10px;
+  text-align: center;
+  
+}
+
+.title {
+    font-size: 6em;
+}
+
+.sub-title {
+    font-family: 1.5em;
+}
+
+
+.f-c {
+    display: flex;
+    flex-direction: column;
+}
+
+.f{
+    display: flex;
+}
+
+
+#testament-section {
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  background-color: var(--yellow);
+}
+
+#testament-heading {
+  font-size: 4.25em;
+
+}
+
+#testament-heading::before {
+  content: url(./assets/img/hash.svg);
+  width: 150px;
+  aspect-ratio: 1;
+  
+
+}
+
+.hero-doodles {
+    position: absolute;
+
+}
+
+#globe {
+  left : 20%;
+  top : 10%
+}
+
+
+#bird {
+  right : 15%;
+  top : 20%;
+  transform: rotate(20deg);
+}
+
+#plane {
+  bottom: 40%;
+  left : 20%;
+}
+#heart {
+  bottom: 10%;
+  right: 20%;
+
+}
+
+.testaments-container {
+  text-align: center;
+  font-weight: 500;
+  padding: 2em;
+}
+
+.testaments {
+  transition: all 1.5s ease-in-out;
+}
+
+#red-slider {
+  background-color: var(--red);
+}
+
+.slider-icon {
+  padding: 0px 1em;
+  white-space: nowrap;
+}
+
+.slider-icon i{
+    font-size: 2.5em;
+    color: var(--black);
+    font-family: “Font Awesome 5 Free“; 
+    font-weight: 900;
+    margin: -5px;
+}
+
+.sliding-text {
+  padding: 0px 2em;
+  display: inline;
+  overflow: hidden;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  width: 100%;
+  
+}
+.sliding-text p {
+  display: inline;
+  font-family: "porter sans";
+  text-transform: capitalize;
+  animation: slide-left 15s linear infinite;
+}
+
+@keyframes slide-left {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: -100%;
+    width: 100%;
+  }
+
+}
+
+#quote {
+  align-items: center;
+  background-color: var(--white);
+}
+
+.side-image {
+  height: 100%;
+  padding: 1.5em;
+  width: 40%;
+}
+
+.side-image svg {
+  height: 100% !important;
+  margin: 0;
+}
+
+#green-container {
+  background-color: var(--green);
+  align-items: center;
+  height: min-content;
+  color: var(--white);
+}
+
+.green-text {
+  height: 100%;
+  min-width: 60%;
+  padding-left: 2em;
+
+}
+
+.green-aside-image {
+  max-width: 40%;
+}
+
+.green-aside-image svg {
+  max-width: 100% !important;
+  max-height: 100%;
+}
+
+#yellow-slider {
+  background-color: var(--yellow);
+}
+
+.article {
+  text-indent: 50px;
+  padding: 3em;
+}
+
+.tile-container {
+  display: grid;
+  grid-template-columns: 18% 18% 18% 18% 18%;
+  gap: 10px 10px;
+  place-content: center;
+  background-color: var(--charcoal);
+  
+}
+
+
+.tiles {
+  height: 200px;
+  background-color: var(--red);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tiles i {
+  font-size: 2em;
+  margin-bottom: 1.25em;
+}
+
+.tiles p {
+  width: calc(80%);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 1.25em;
+  font-weight: 800;
+}
+
+.tiles:hover {
+  transform: scale(1.05);
+}
