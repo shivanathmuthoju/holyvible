@@ -19,7 +19,7 @@ let testament = document.getElementById("testament");
 count = 1 
 
 setInterval(() => {
-    if(count > testaments.length) { count = 0 }
+    if(count > testaments.length - 1) { count = 0 }
     testament.textContent = testaments[count]
     count++;
 
